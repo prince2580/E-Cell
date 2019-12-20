@@ -1,69 +1,88 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Home|Ecell ABV-IIITM</title>
+    <title>E-Cell|IIITM Gwalior</title>
+
+    <link rel="stylesheet" href="css/parallax.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
+    <link rel="stylesheet" href="css/outer.css">
+    <link rel="stylesheet" href="css/preloader.css">
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-        $(window).on('load', function () {
-            $('.preloader').addClass('complete')
-        })
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        $(window).on('load', async function () {
+            const toggle = document.getElementById("toggleBtn");
+            const nav = document.querySelector(".nav-list");
+            const navLi = document.querySelectorAll(".nav-item");
+            const navBar = document.getElementById("nav");
+            const mainDiv = document.getElementById("main");
+
+            await sleep(500);
+            $(".preloader").addClass("complete");
+
+            mainDiv.style.visibility = "initial";
+
+            toggle.addEventListener("click", () => {
+                nav.classList.toggle("toggled-list");
+
+                for (var i = 0; i < navLi.length; i++) {
+                    const element = navLi[i];
+                    element.style.animation = element.style.animation
+                        ? ""
+                        : `navFade 0.5s ease forwards ${(i + 1.5) / 8}s`;
+                }
+
+                toggle.classList.toggle("toggle-close");
+                navBar.classList.toggle('toggle-nav');
+            });
+        });
     </script>
 </head>
 
-<body>
+<body class="outer" id="body">
     <div class="preloader">
         <div class="loading"></div>
     </div>
-
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" style="opacity: 0.9;">
-        <!-- <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
-
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#" style="padding: 15px;">HOME</a>
+    <div id="main" style="visibility: hidden;">
+        <nav id="nav" class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="padding: 15px;">INITIATIVES</a>
+                    <a href="#" class="nav-link">INITIATIVES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="padding: 15px;">EVENTS</a>
+                    <a href="#" class="nav-link">EVENTS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="padding: 15px;">TEAM</a>
+                    <a href="#" class="nav-link">TEAM</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="padding: 15px;">CONTACT</a>
+                    <a href="#" class="nav-link">CONTACT</a>
                 </li>
             </ul>
-        </div>
-    </nav>
 
-    <div class="test">
-
+            <div class="toggle" id="toggleBtn">
+                <div class="line1"></div>
+                <div class="line2" id="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <header>
+            <h1 style="font-size: 50px;">Hello</h1>
+        </header>
     </div>
-
 </body>
 
 </html>
