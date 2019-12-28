@@ -1,4 +1,5 @@
 .navbar {
+  background-color: rgba(11, 12, 16, 0.9);
   display: flex;
   top: 0 !important;
   min-height: 8vh;
@@ -16,6 +17,7 @@
   width: 100%;
   text-align: center;
   line-height: 22px;
+  margin: 0;
 }
 
 .nav-item {
