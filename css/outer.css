@@ -16,3 +16,11 @@ header > h1 {
   text-align: center;
   width: 100%;
 }
+
+.fa{
+  color: #ffffff !important;
+}
+
+i{
+  margin-right: 10px;
+}
