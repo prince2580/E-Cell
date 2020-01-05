@@ -65,6 +65,7 @@
   .nav-list {
     position: absolute;
     background-color: #0b0c10 !important;
+    opacity: 0.9;
     right: 0;
     height: 92vh;
     top: 8vh;
