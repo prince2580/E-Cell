@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Solway:800&display=swap');
+
 *:focus {
   outline: 0 !important;
 }
@@ -12,7 +14,32 @@
 
 header > h1 {
   position: absolute;
+  font-family: Solway;
   bottom: 12%;
   text-align: center;
   width: 100%;
+}
+
+.fa{
+  color: #ffffff !important;
+}
+
+i{
+  margin-right: 10px;
+}
+
+.ecell-logo img{
+  height: 45px;
+  width: 45px;
+  margin-left: 10px;
+}
+
+.ecell-logo img {
+  -webkit-transition: width 1s, height 1s;
+  transition: width 1s, height 1s;
+}
+
+.ecell-logo img:hover{
+  height: 55px;
+  width: 55px;
 }
