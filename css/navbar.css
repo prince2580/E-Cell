@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgba(11, 12, 16, 0.9);
+  background-color: transparent;
   display: flex;
   top: 0 !important;
   min-height: 8vh;
