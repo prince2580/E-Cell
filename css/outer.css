@@ -12,7 +12,7 @@
   font-family: "Open Sans";
 }
 
-header h1 {
+header > h1 {
   position: absolute;
   bottom: 12%;
   text-align: center;
