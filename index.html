@@ -85,11 +85,14 @@
 
             var counted_or_not = 0;
             body.addEventListener("scroll", () => {
+                var percentScroll = parseInt((body.scrollTop / body.scrollHeight) * 100);
+                navBar.style.opacity = (percentScroll >= 15 ? 1 : 0)
+
                 var top_of_element = $(".initiatives").offset().top;
                 var body_height = $("#body").innerHeight();
-
                 var some = top_of_element - body_height;
                 var some2 = body_height * (-1);
+
                 if (counted_or_not === 0) {
                     if (some <= 0 && some > some2) {
                         counterPage.forEach(async (element, index) => {
@@ -262,24 +265,24 @@
             and British spellings for primarily British topics. In 2009 Lih wrote, "No doubt, American spellings tend to
             dominate by default just because of sheer numbers."</p>
 
-            <div class="contact">
-                <form action="https://formspree.io/xeqelezo" method="POST">
-                    <div class="comp">
-                        <label>
-                            Your email:
-                        </label>
-                        <input type="text" name="_replyto">
-                    </div>
-                    <div class="comp">
-                        <label>
-                            Your message:
-                        </label>
-                        <textarea name="message"></textarea>
-                    </div>
-        
-                    <button type="submit" class="btn">Send</button>
-                </form>
-            </div>
+        <div class="contact">
+            <form action="https://formspree.io/xeqelezo" method="POST">
+                <div class="comp">
+                    <label>
+                        Your email:
+                    </label>
+                    <input type="text" name="_replyto">
+                </div>
+                <div class="comp">
+                    <label>
+                        Your message:
+                    </label>
+                    <textarea name="message"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </div>
 
     </div>
 

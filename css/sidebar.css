@@ -43,5 +43,6 @@
   position: sticky;
   top: 90% !important;
   font-size: 25px;
+  cursor: pointer;
   transform: translateX(calc(100vw - 55px));
 }
