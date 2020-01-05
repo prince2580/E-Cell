@@ -39,8 +39,6 @@
 
 .backToTop {
   position: sticky;
-  top: 85% !important;
-  float: right;
-  height: 40px;
-  width: 40px;
+  top: 90% !important;
+  transform: translateX(calc(90vw));
 }
