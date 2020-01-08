@@ -40,6 +40,7 @@ header::before {
   content: "";
   display: block;
   background-image: url("../images/BK1.jpeg");
+  background-repeat: no-repeat;
   background-size: cover;
   transform-origin: center center 0;
   transform: translateZ(-1px) scale(2);

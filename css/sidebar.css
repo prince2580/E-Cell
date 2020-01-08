@@ -1,0 +1,50 @@
+.sidebar {
+  position: sticky;
+  top: 90% !important;
+  width: 30%;
+  min-width: 300px;
+  height: auto;
+  padding: 20px;
+  background: black;
+  transform: translateX(-100%);
+  transition: 0.3s ease-in-out;
+}
+
+.sidebar-toggle:hover {
+  background-color: #9f0000;
+  width: 120px;
+  right: -120px;
+}
+
+.sidebar-toggle,
+.sideToggle {
+  width: 50px;
+  height: 50px;
+  padding: 4px 6px 6px 5px;
+  cursor: pointer;
+  background: #990033;
+  top: 0;
+  right: -50px;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.sidebar-toggle span,
+.sideToggle span {
+  margin: 8px 5px;
+}
+
+.sidebar.active {
+  transform: translate(0%, -100%);
+}
+
+.backToTop {
+  position: sticky;
+  top: 90% !important;
+  font-size: 25px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  transform: translateX(calc(100vw - 55px));
+}
