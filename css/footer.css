@@ -3,41 +3,43 @@ footer{
     margin-bottom: 0px;
     box-sizing: border-box;
     background-color: rgba(22, 23, 29, 0.9);
-    padding: 10px 50px 0 50px;
     width: 100%;
 }
 
 .container{
+    width: 100%;
+    padding: 10px 50px 0 50px;
     display: flex;
+    justify-content: space-between;
 }
 
-.links{
-    margin: 0px 50px 0px 50px;
-}
-
-.social-media{
-    margin: 0px 50px 0px 50px;
-}
 
 .link-list{
     display: block;
-    width: 100%;
     list-style: none;
-    height: 10vw;
 }
 
 .link-item > a{
-    margin: 20px 0 20px 0;
     text-decoration: none;
     color: #ffffff;
-}
-
-li{
-    margin: 10px 0 10px 0;
 }
 
 .copyright{
     text-align: center;
     font-family: sans-serif;
-    margin: 20px 0px 20px 0px;
+    margin-top: 10px;
+    bottom: 0;
+    
 }
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .address { display: none; }  /* show it on small screens */
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    .address { display: block; }   /* hide it elsewhere */
+
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+  }
