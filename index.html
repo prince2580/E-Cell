@@ -107,7 +107,14 @@
                 }
             });
 
-            backToTop.addEventListener("click", () => {
+            backToTop.addEventListener("click", async () => {
+                const toGo = ($(document).height() - $(window).height()) / 100;
+                var i = body.scrollTop;
+                while (i > toGo) {
+                    await sleep(5);
+                    i -= toGo;
+                    body.scrollTop = i;
+                }
                 body.scrollTop = 0;
             });
         });
@@ -337,6 +344,7 @@
                 <div class="copyright">
                     <p>© Copyright 2020 E-Cell ABV-IIITM</p>
                 </div>
+            </div>
 
             </footer>
         </div>
