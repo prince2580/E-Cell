@@ -6,7 +6,7 @@
   height: auto;
   padding: 20px;
   background: black;
-  transform: translate(-100%, -100%);
+  transform: translateX(-100%);
   transition: 0.3s ease-in-out;
 }
 
