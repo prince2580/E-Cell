@@ -24,6 +24,11 @@ footer{
     color: #ffffff;
 }
 
+.link-list > li{
+    margin-bottom: 7px;
+}
+
+
 .copyright{
     text-align: center;
     font-family: sans-serif;
